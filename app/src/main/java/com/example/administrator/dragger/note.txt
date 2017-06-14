@@ -11,3 +11,5 @@ Dagger2是怎么选择依赖提供的呢，规则是这样的：
 
 步骤3.2：若不存在参数，则直接初始化该类实例，一次依赖注入到此结束
 dagger可以在接口中添加依赖，dependencies注解就是像其添加依赖
+
+dagger2中很有可能出现This module is declared, but an instance is not used in the component. This method is a no-op.这样的废弃警告，多半是出现在生成moudle的方法中。这是因为在代码中dagger没有找到注入的对象，在需要注入的地方@Inject 变量名， 重新编译就可以重新生成该方法。MDZZ
